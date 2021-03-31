@@ -1,0 +1,481 @@
+@import url("https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap");
+
+:root {
+  --white: white;
+  --btn-clr: #dd5a6a;
+}
+html,
+body {
+  width: 1440px;
+  scroll-behavior: smooth;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.top-page {
+  height: 600px;
+}
+.top-page .bg {
+  width: auto;
+}
+
+.top-page .top-split {
+  display: flex;
+  flex-direction: row;
+  transform: translate(8%, -100%);
+}
+.left {
+  width: 50%;
+  margin-right: 5rem;
+}
+.left h1 {
+  margin-top: 3rem;
+  color: #ffffff;
+  font-family: "Titillium Web", sans-serif;
+  font-size: 31px;
+  letter-spacing: 1.28px;
+  line-height: 40px;
+  text-align: left;
+}
+.left p {
+  color: #c2bdbd;
+  font-family: sans-serif;
+  font-size: 23px;
+  letter-spacing: 3.59px;
+  line-height: 34px;
+  width: 599px;
+  text-align: left;
+}
+.left .book {
+  background-color: var(--btn-clr);
+  border-radius: 3.2px;
+  width: 186px;
+  height: 45px;
+  color: #ffffff;
+  font-family: Arial;
+  font-size: 14.4px;
+  line-height: 17px;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.right {
+  background-color: #ffffff;
+  box-shadow: -4px 2px 13px 0 rgba(85, 95, 126, 0.18);
+  width: 339px;
+  height: 492px;
+  transform: translateY(-5%);
+}
+.right input {
+  border: 0.87px solid #d0d0d0;
+  width: 278px;
+  height: 42px;
+  margin-bottom: 10px;
+  padding-left: 10px;
+}
+.right input[name="message"] {
+  height: 55px;
+  padding-bottom: 20px;
+}
+.right .enquire {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+}
+.right h3 {
+  color: #213559;
+  font-family: sans-serif;
+  font-size: 20.08px;
+  line-height: 24px;
+  width: 150px;
+  text-align: left;
+  margin-left: 2rem;
+  margin-top: 1rem;
+}
+.right .recaptcha {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #ffffff;
+  border: 0.87px solid #d0d0d0;
+  width: 278px;
+  height: 77px;
+}
+.right .recaptcha img {
+  width: 50px;
+  height: 50px;
+}
+.rectangle {
+  background-color: #ffffff;
+  border: 0.87px solid #979797;
+  border-radius: 0.87px;
+  width: 18px;
+  height: 18px;
+  margin-right: 5px;
+}
+.recaptcha .robot {
+  display: flex;
+  flex-direction: row;
+}
+.right .submit {
+  background-color: var(--btn-clr);
+  width: 111px;
+  height: 44px;
+  margin-top: 1rem;
+  margin-left: 2rem;
+  color: #ffffff;
+  font-family: StagSans;
+  font-size: 14.84px;
+  line-height: 18px;
+  text-align: center;
+}
+.bone {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding-right: 214px;
+  padding-left: 182px;
+  margin-bottom: 4rem;
+}
+.bone .bone-img {
+  width: 400px;
+  height: 300px;
+  margin-right: 25px;
+}
+.text .top-text {
+  background: linear-gradient(to right, #2ec4b8 0%, #6078ea 100%);
+  border-radius: 4px;
+  width: 470px;
+  height: 60px;
+  margin: 1rem 0 2rem 0;
+}
+.text .top-text p {
+  color: #ffffff;
+  font-family: sans-serif;
+  font-size: 15px;
+  line-height: 20px;
+  width: 470px;
+  text-align: left;
+  padding: 10px;
+}
+.text .text-div p {
+  color: #302e2e;
+  font-family: sans-serif;
+  font-size: 13px;
+  line-height: 20px;
+  width: 490px;
+  text-align: left;
+  margin-top: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #ececff;
+}
+
+.doctors {
+  margin-left: 215px;
+}
+.doctors h1 {
+  color: #22b78e;
+  font-family: sans-serif;
+  font-size: 31px;
+  letter-spacing: 1.28px;
+  line-height: 44px;
+  text-align: left;
+}
+.doctors .flex {
+  display: flex;
+  flex-direction: row;
+}
+.doctors .arrange {
+  background-color: #f9f9ff;
+  border-radius: 4px;
+  width: 490px;
+  height: 1000px;
+  margin-top: 1rem;
+  margin-right: 1rem;
+}
+.doctors .pediatric {
+  text-align: center;
+  padding-top: 2rem;
+}
+
+.pediatric h2 {
+  color: #22b78e;
+  font-family: sans-serif;
+  font-size: 24px;
+  letter-spacing: 0.99px;
+  line-height: 44px;
+  margin-bottom: 20px;
+}
+.pediatric .doctor-name h3 {
+  margin: 1rem 0 0.8rem 0;
+  color: #1d5aa6;
+  font-family: sans-serif;
+  font-size: 22px;
+  letter-spacing: 1.76px;
+  line-height: 26px;
+}
+.pediatric .doctor-name p:nth-child(2),
+.pediatric .doctor-name p:nth-child(3) {
+  color: #1d5aa6;
+  font-family: StagSans;
+  font-size: 15px;
+  letter-spacing: 1.2px;
+  line-height: 3px;
+  margin-bottom: 15px;
+}
+.pediatric .details p {
+  color: #302e2e;
+  font-family: sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  width: 500px;
+  padding: 0 3rem 1rem 3rem;
+}
+.pediatric .border {
+  border-top: 1px solid #22b78e;
+  width: 37px;
+  height: 1px;
+  margin: 10px 230px;
+}
+.pediatric .details button {
+  background: linear-gradient(to right, #2ec4b8 0%, #6078ea 100%);
+  border-radius: 4px;
+  width: 129px;
+  height: 49px;
+}
+.pediatric .border-btwn {
+  border: 1px solid #ececff;
+  width: 415px;
+  height: 2px;
+  margin: 0px 40px 2rem 40px;
+  padding: 0 10px;
+}
+
+.types {
+  margin: 0px 200px;
+}
+.types h1 {
+  color: #22b78e;
+  font-family: StagSans;
+  font-size: 31px;
+  letter-spacing: 1.28px;
+  line-height: 44px;
+  text-align: left;
+  margin-top: 4rem;
+  margin-bottom: 1.5rem;
+}
+.types .list {
+  list-style-image: url("./images/list-marker.png");
+  padding: 0px 30px;
+}
+.types .list li {
+  padding-right: 100px;
+  color: #302e2e;
+  font-family: sans-serif;
+  font-size: 12px;
+  line-height: 39px;
+  width: 1068px;
+  text-align: left;
+}
+.warning-signs {
+  margin: 20px 200px;
+}
+.warning-signs h1 {
+  color: #22b78e;
+  font-family: sans-serif;
+  font-size: 31px;
+  letter-spacing: 1.28px;
+  line-height: 44px;
+  text-align: left;
+  margin-bottom: 30px;
+}
+.warning-signs .sign-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  row-gap: 20px;
+}
+
+.warning-signs .sign {
+  background-color: #ffffff;
+  border: 1px solid #e5eaff;
+  border-radius: 4px;
+  box-shadow: 3px 5px 29px 0 rgba(187, 165, 228, 0.1);
+  width: 240px;
+  height: 150px;
+  padding: 20px;
+  align-items: center;
+}
+.warning-signs .sign p {
+  color: #302e2e;
+  font-family: sans-serif;
+  font-size: 14px;
+  line-height: 21px;
+  width: 198px;
+  text-align: left;
+}
+.warning-signs .sign img {
+  padding-bottom: 10px;
+}
+.drop-down {
+  margin: 4rem 215px 0px 215px;
+}
+
+.drop-down .drp1 p {
+  color: #1d5aa6;
+  font-family: sans-serif;
+  font-size: 20px;
+  letter-spacing: 1.6px;
+  line-height: 22px;
+  width: 950px;
+  text-align: left;
+  margin-bottom: 10px;
+}
+.drop-down .drp1 .p-border {
+  border-bottom: 1px solid #ececff;
+  width: 1000px;
+  margin: 10px 0;
+}
+.drp1 .drp-img {
+  display: flex;
+  flex-direction: row;
+}
+.drp1 .drp-img img {
+  width: 22px;
+  height: 11px;
+}
+.drp1 #text {
+  list-style-image: url("./images/tick-mark.png");
+  padding: 0px 30px;
+  color: #302e2e;
+  font-family: sans-serif;
+  font-size: 12px;
+  line-height: 30px;
+  width: 1052px;
+  text-align: left;
+  padding-bottom: 10px;
+}
+.show {
+  display: block;
+}
+.testimonials {
+  margin: 0px 215px;
+}
+.testimonials h1 {
+  color: #22b78e;
+  font-family: sans-serif;
+  font-size: 31px;
+  letter-spacing: 1.28px;
+  line-height: 44px;
+  text-align: left;
+}
+.testimonials p {
+  color: #302e2e;
+  font-family: sans-serif;
+  font-size: 12px;
+  line-height: 21px;
+  width: 520px;
+  text-align: left;
+}
+.testimonail-slider {
+  background-color: #ffffff;
+  border-radius: 4px;
+  box-shadow: 9px 8px 27px 0 rgba(0, 0, 0, 0.04);
+  width: 400px;
+  height: 200px;
+  margin: 10px;
+}
+.testimonail-slider .slider {
+  display: flex;
+  flex-direction: row;
+  padding: 3rem 20px 0 20px;
+}
+.testimonail-slider .slider .text {
+  margin-left: 10px;
+  padding-top: 10px;
+}
+.testimonail-slider .info {
+  color: #302e2e;
+  font-family: sans-serif;
+  font-size: 12px;
+  font-style: italic;
+  line-height: 21px;
+  width: 410px;
+  text-align: left;
+  padding: 20px 20px;
+}
+.testimonials .slider-dots .dots li {
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.testimonials .slider-dots button {
+  font-size: 0;
+  width: 8px;
+  height: 5px;
+  margin-right: 0.3rem;
+  border: none;
+  outline: none;
+  background: black;
+  border-radius: 50px;
+  cursor: pointer;
+}
+.dots li.slick-active button {
+  background: #22b78e;
+  width: 20px;
+}
+.btn {
+  margin: 3rem 215px;
+  display: flex;
+  justify-content: center;
+}
+.btn .appointment-btn {
+  background-color: #004498;
+  border-radius: 3.81px;
+  width: 221px;
+  height: 54px;
+  color: #ffffff;
+  font-family: Arial;
+  font-size: 17.14px;
+  line-height: 21px;
+  text-align: center;
+}
+.footer {
+  background-color: #272727;
+  width: 1440px;
+  height: 256px;
+}
+.footer .social {
+  padding-top: 5rem;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  justify-content: center;
+}
+.footer .up-img {
+  transform: translate(80%, -60%);
+}
+
+.footer .border {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.21);
+  opacity: 0.3701869419642857;
+  width: 1110px;
+  height: 2px;
+  margin: 0px 10rem;
+}
+.footer p {
+  color: #c2bdbd;
+  font-family: sans-serif;
+  font-size: 12px;
+  letter-spacing: 1.12px;
+  line-height: 17px;
+  text-align: left;
+  margin-top: 10px;
+  text-align: center;
+}
