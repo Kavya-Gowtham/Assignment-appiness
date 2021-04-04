@@ -15,11 +15,15 @@ body {
   margin: 0;
   box-sizing: border-box;
 }
+.show {
+  display: block;
+}
 .top-page {
+  /* width: 110%; */
   height: 600px;
 }
 .top-page .bg {
-  width: auto;
+  width: 100%;
 }
 
 .top-page .top-split {
@@ -69,7 +73,7 @@ body {
   height: 492px;
   transform: translateY(-5%);
 }
-.right input {
+.right .form {
   border: 0.87px solid #d0d0d0;
   width: 278px;
   height: 42px;
@@ -100,18 +104,19 @@ body {
 .right .recaptcha {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   background-color: #ffffff;
   border: 0.87px solid #d0d0d0;
   width: 278px;
   height: 77px;
+  padding: 0px 20px 0px 10px;
 }
 .right .recaptcha img {
   width: 50px;
   height: 50px;
 }
-.rectangle {
+.recaptcha .robot .rectangle {
   background-color: #ffffff;
   border: 0.87px solid #979797;
   border-radius: 0.87px;
@@ -123,24 +128,30 @@ body {
   display: flex;
   flex-direction: row;
 }
-.right .submit {
+.recaptcha .robot .robot-text {
+  color: #6a6a6b;
+  font-size: 13px;
+  font-family: sans-serif;
+}
+.right .enquire .submit {
   background-color: var(--btn-clr);
   width: 111px;
   height: 44px;
   margin-top: 1rem;
-  margin-left: 2rem;
+  /* margin-left: 2rem; */
   color: #ffffff;
-  font-family: StagSans;
+  font-family: sans-serif;
   font-size: 14.84px;
   line-height: 18px;
-  text-align: center;
+  /* text-align: center; */
 }
+
 .bone {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
-  padding-right: 214px;
-  padding-left: 182px;
+  justify-content: center;
+  margin-right: 214px;
+  margin-left: 182px;
   margin-bottom: 4rem;
 }
 .bone .bone-img {
@@ -186,22 +197,21 @@ body {
   letter-spacing: 1.28px;
   line-height: 44px;
   text-align: left;
+  margin-bottom: 30px;
 }
 .doctors .flex {
   display: flex;
   flex-direction: row;
-}
-.doctors .arrange {
-  background-color: #f9f9ff;
-  border-radius: 4px;
-  width: 490px;
-  height: 1000px;
-  margin-top: 1rem;
-  margin-right: 1rem;
+  flex-wrap: wrap;
 }
 .doctors .pediatric {
   text-align: center;
   padding-top: 2rem;
+  background-color: #f9f9ff;
+  border-radius: 4px;
+  width: 490px;
+  height: 550px;
+  margin-right: 1rem;
 }
 
 .pediatric h2 {
@@ -234,7 +244,7 @@ body {
   font-family: sans-serif;
   font-size: 14px;
   line-height: 20px;
-  width: 500px;
+  /* width: 500px; */
   padding: 0 3rem 1rem 3rem;
 }
 .pediatric .border {
@@ -334,7 +344,6 @@ body {
   line-height: 22px;
   width: 950px;
   text-align: left;
-  margin-bottom: 10px;
 }
 .drop-down .drp1 .p-border {
   border-bottom: 1px solid #ececff;
@@ -344,27 +353,26 @@ body {
 .drp1 .drp-img {
   display: flex;
   flex-direction: row;
+  margin: 20px 0px;
 }
 .drp1 .drp-img img {
   width: 22px;
   height: 11px;
 }
-.drp1 #text {
+
+.drp1 .text-drp {
   list-style-image: url("./images/tick-mark.png");
-  padding: 0px 30px;
   color: #302e2e;
   font-family: sans-serif;
   font-size: 12px;
   line-height: 30px;
-  width: 1052px;
+  width: 900;
   text-align: left;
-  padding-bottom: 10px;
-}
-.show {
-  display: block;
+  background-color: #ffffff;
+  display: none;
 }
 .testimonials {
-  margin: 0px 215px;
+  margin: 4rem 215px;
 }
 .testimonials h1 {
   color: #22b78e;
@@ -381,19 +389,20 @@ body {
   line-height: 21px;
   width: 520px;
   text-align: left;
+  margin-bottom: 20px;
 }
 .testimonail-slider {
   background-color: #ffffff;
   border-radius: 4px;
-  box-shadow: 9px 8px 27px 0 rgba(0, 0, 0, 0.04);
-  width: 400px;
+  box-shadow: 2px 2px 12px rgb(0 0 0 / 15%);
+  width: 300px;
   height: 200px;
   margin: 10px;
 }
 .testimonail-slider .slider {
   display: flex;
   flex-direction: row;
-  padding: 3rem 20px 0 20px;
+  padding: 2rem 20px 0 20px;
 }
 .testimonail-slider .slider .text {
   margin-left: 10px;
@@ -409,27 +418,21 @@ body {
   text-align: left;
   padding: 20px 20px;
 }
-.testimonials .slider-dots .dots li {
-  list-style-type: none;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
+.pull-left {
+  float: right;
+  margin-bottom: 20px;
 }
-.testimonials .slider-dots button {
-  font-size: 0;
-  width: 8px;
-  height: 5px;
-  margin-right: 0.3rem;
-  border: none;
-  outline: none;
-  background: black;
-  border-radius: 50px;
-  cursor: pointer;
+.slick-next {
+  transform: translate(-100%, -900%);
+  width: 30px;
+  height: 30px;
 }
-.dots li.slick-active button {
-  background: #22b78e;
-  width: 20px;
+.slick-prev {
+  transform: translate(-250%, -165%);
+  width: 30px;
+  height: 30px;
 }
+
 .btn {
   margin: 3rem 215px;
   display: flex;
@@ -456,7 +459,6 @@ body {
   display: flex;
   justify-content: center;
   gap: 10px;
-  justify-content: center;
 }
 .footer .up-img {
   transform: translate(80%, -60%);
@@ -478,4 +480,64 @@ body {
   text-align: left;
   margin-top: 10px;
   text-align: center;
+}
+
+@media (max-width: 1000px) {
+  /* .top-page .bg {
+    width: 80%;
+  } */
+  .left {
+    width: 40%;
+  }
+  .bone {
+    margin-left: 0px;
+  }
+  .doctors {
+    width: 80%;
+    margin-left: 150px;
+  }
+  .doctors .pediatric {
+    width: 450px;
+  }
+  .pediatric .border {
+    margin: 10px 210px;
+  }
+  .pediatric .details p {
+    padding: 0 1rem 1rem 1rem;
+  }
+  .types {
+    margin: 0px 140px;
+  }
+  .types .list li {
+    width: 1000px;
+  }
+  .warning-signs {
+    margin: 20px 120px;
+  }
+  .warning-signs .sign-container {
+    width: 1000px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+  .drop-down {
+    margin: 4rem 120px 0px 120px;
+  }
+  .testimonials {
+    margin: 4rem 120px;
+  }
+  .slick-list {
+    width: 80%;
+  }
+  .slick-next {
+    transform: translate(-900%, -900%);
+  }
+  .slick-prev {
+    transform: translate(-1050%, -170%);
+  }
+  .btn {
+    margin: 3rem 245px;
+    width: 50%;
+  }
+  .footer {
+    width: 85%;
+  }
 }

@@ -6,9 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ASTER CMI HOSPITAL</title>
     <link
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      rel="stylesheet"
+    />
+    <link
       rel="stylesheet"
       type="text/css"
-      href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
     />
     <link rel="stylesheet" href="./style.css" />
   </head>
@@ -20,24 +24,48 @@
           <img src="./images/Aster_logo_white.png" alt="logo" />
           <h1>ADULT & PAEDIATRIC BONE MARROW TRANSPLANT PROGRAMME</h1>
           <p>Haematology | Oncology | Immunology</p>
-          <button class="book">Book An Appoinment</button>
+          <button class="book">Book An Appointment</button>
         </div>
         <div class="right">
           <h3>Enquire now</h3>
           <form class="enquire">
-            <input type="text" name="name" placeholder="Name" />
-            <input type="email" name="email" placeholder="Email ID" />
-            <input type="phone" name="phone" placeholder="Phone number" />
-            <input type="text" name="message" placeholder="Your Message" />
+            <input
+              class="form"
+              type="text"
+              name="name"
+              placeholder="Name"
+              required
+            />
+            <input
+              class="form"
+              type="email"
+              name="email"
+              placeholder="Email ID"
+              required
+            />
+            <input
+              class="form"
+              type="phone"
+              name="phone"
+              placeholder="Phone number"
+              required
+            />
+            <input
+              class="form"
+              type="text"
+              name="message"
+              placeholder="Your Message"
+              required
+            />
             <div class="recaptcha">
               <div class="robot">
-                <div class="rectangle"></div>
-                <p>I’m not a robot</p>
+                <input type="checkbox" class="rectangle" required />
+                <label class="robot-text"> I’m not a robot</label>
               </div>
               <img src="./images/recaptcha.png" alt="recaptcha" />
             </div>
+            <button type="submit" class="submit">Submit</button>
           </form>
-          <button class="submit">Submit</button>
         </div>
       </div>
     </header>
@@ -69,84 +97,7 @@
     </section>
     <section class="doctors">
       <h1>Doctors</h1>
-      <div class="flex">
-        <div class="arrange">
-          <div class="pediatric">
-            <h2>Pediatric BMT</h2>
-            <img src="./images/Bitmap Copy.png" alt="person-img" />
-            <div class="doctor-name">
-              <h3>Dr. Vijay Agarwal</h3>
-              <p>MD, MRCP, PhD,CCT</p>
-              <p>Lead & Sr. Consultant - Medical Oncology & Haematology</p>
-            </div>
-            <div class="details">
-              <div class="border"></div>
-              <p>
-                Dr. Vijay Agarwal is a Senior Consultant Medical Oncologist with
-                over 12 years of experience in Oncology. Dr. Agarwal has been
-                practising Medical Oncology since 2004.
-              </p>
-              <button>Know More</button>
-            </div>
-          </div>
-          <div class="pediatric">
-            <div class="border-btwn"></div>
-            <img src="./images/Bitmap Copy.png" alt="person-img" />
-            <div class="doctor-name">
-              <h3>Dr. Vijay Agarwal</h3>
-              <p>MD, MRCP, PhD,CCT</p>
-              <p>Lead & Sr. Consultant - Medical Oncology & Haematology</p>
-            </div>
-            <div class="details">
-              <div class="border"></div>
-              <p>
-                Dr. Vijay Agarwal is a Senior Consultant Medical Oncologist with
-                over 12 years of experience in Oncology. Dr. Agarwal has been
-                practising Medical Oncology since 2004.
-              </p>
-              <button>Know More</button>
-            </div>
-          </div>
-        </div>
-        <div class="arrange">
-          <div class="pediatric">
-            <h2>Adult BMT</h2>
-            <img src="./images/Bitmap Copy.png" alt="person-img" />
-            <div class="doctor-name">
-              <h3>Dr. Vijay Agarwal</h3>
-              <p>MD, MRCP, PhD,CCT</p>
-              <p>Lead & Sr. Consultant - Medical Oncology & Haematology</p>
-            </div>
-            <div class="details">
-              <div class="border"></div>
-              <p>
-                Dr. Vijay Agarwal is a Senior Consultant Medical Oncologist with
-                over 12 years of experience in Oncology. Dr. Agarwal has been
-                practising Medical Oncology since 2004.
-              </p>
-              <button>Know More</button>
-            </div>
-          </div>
-          <div class="pediatric">
-            <div class="border-btwn"></div>
-            <img src="./images/Bitmap Copy.png" alt="person-img" />
-            <div class="doctor-name">
-              <h3>Dr. Vijay Agarwal</h3>
-              <p>MD, MRCP, PhD,CCT</p>
-              <p>Lead & Sr. Consultant - Medical Oncology & Haematology</p>
-            </div>
-            <div class="details">
-              <div class="border"></div>
-              <p>
-                Dr. Vijay Agarwal is a Senior Consultant Medical Oncologist with
-                over 12 years of experience in Oncology. Dr. Agarwal has been
-                practising Medical Oncology since 2004.
-              </p>
-              <button>Know More</button>
-            </div>
-          </div>
-        </div>
-      </div>
+      <div class="flex" id="doctorlist"></div>
     </section>
     <section class="types">
       <h1>What are the types of Bone Marrow Transplant?</h1>
@@ -234,10 +185,16 @@
       <div class="drp1">
         <div class="drp-img">
           <p>What are the conditions that requireBone Marrow Transplant?</p>
-          <img src="./images/dropdown.png" alt="" />
+          <img
+            id="drop-img"
+            class="dropimg"
+            onclick="showDropDown(0, this)"
+            src="./images/dropdown.png"
+            alt=""
+          />
         </div>
         <div class="p-border"></div>
-        <ul id="text">
+        <div class="text-drp hidden">
           <li>
             BMT is the treatment of choice for blood disorders like Thalassemia,
             Sickle Cell anemia, bone marrow failure syndromes like Aplastic
@@ -250,7 +207,7 @@
             solid tumours like Neuroblastoma, Ewings Sarcoma and certain
             relapsed cancers like Lymphomas
           </li>
-        </ul>
+        </div>
       </div>
       <div class="drp1">
         <div class="drp-img">
@@ -258,10 +215,15 @@
             Which are the hematological diseases that may benefit from bone
             marrow transplants?
           </p>
-          <img src="./images/dropdown.png" alt="" />
+          <img
+            id="drop-img"
+            onclick="showDropDown(1, this)"
+            src="./images/dropdown.png"
+            alt=""
+          />
         </div>
         <div class="p-border"></div>
-        <ul id="text">
+        <div class="text-drp">
           <li>
             BMT is the treatment of choice for blood disorders like Thalassemia,
             Sickle Cell anemia, bone marrow failure syndromes like Aplastic
@@ -274,18 +236,22 @@
             solid tumours like Neuroblastoma, Ewings Sarcoma and certain
             relapsed cancers like Lymphomas
           </li>
-        </ul>
+        </div>
       </div>
       <div class="drp1">
         <div class="drp-img">
           <p>
             Which are the Cancers that may benefit from bone marrow transplants?
           </p>
-          <img src="./images/dropdown.png" alt="" />
+          <img
+            id="drop-img"
+            onclick="showDropDown(2, this)"
+            src="./images/dropdown.png"
+            alt=""
+          />
         </div>
         <div class="p-border"></div>
-
-        <ul id="text">
+        <div class="text-drp hidden">
           <li>
             BMT is the treatment of choice for blood disorders like Thalassemia,
             Sickle Cell anemia, bone marrow failure syndromes like Aplastic
@@ -298,15 +264,20 @@
             solid tumours like Neuroblastoma, Ewings Sarcoma and certain
             relapsed cancers like Lymphomas
           </li>
-        </ul>
+        </div>
       </div>
       <div class="drp1">
         <div class="drp-img">
           <p>Do bone marrow failure syndromes require BMT?</p>
-          <img src="./images/dropdown.png" alt="" />
+          <img
+            id="drop-img"
+            onclick="showDropDown(3, this)"
+            src="./images/dropdown.png"
+            alt=""
+          />
         </div>
         <div class="p-border"></div>
-        <ul id="text">
+        <div class="text-drp hidden">
           <li>
             BMT is the treatment of choice for blood disorders like Thalassemia,
             Sickle Cell anemia, bone marrow failure syndromes like Aplastic
@@ -319,15 +290,20 @@
             solid tumours like Neuroblastoma, Ewings Sarcoma and certain
             relapsed cancers like Lymphomas
           </li>
-        </ul>
+        </div>
       </div>
       <div class="drp1">
         <div class="drp-img">
           <p>What are Primary Immune Deficiency diseases ?</p>
-          <img src="./images/dropdown.png" alt="" />
+          <img
+            id="drop-img"
+            onclick="showDropDown(4, this)"
+            src="./images/dropdown.png"
+            alt=""
+          />
         </div>
         <div class="p-border"></div>
-        <ul id="text">
+        <div class="text-drp hidden">
           <li>
             BMT is the treatment of choice for blood disorders like Thalassemia,
             Sickle Cell anemia, bone marrow failure syndromes like Aplastic
@@ -340,15 +316,20 @@
             solid tumours like Neuroblastoma, Ewings Sarcoma and certain
             relapsed cancers like Lymphomas
           </li>
-        </ul>
+        </div>
       </div>
       <div class="drp1">
         <div class="drp-img">
           <p>Which are the immune deficiencies that warrant BMT?</p>
-          <img src="./images/dropdown.png" alt="" />
+          <img
+            id="drop-img"
+            onclick="showDropDown(5, this)"
+            src="./images/dropdown.png"
+            alt=""
+          />
         </div>
         <div class="p-border"></div>
-        <ul id="text">
+        <div class="text-drp hidden">
           <li>
             BMT is the treatment of choice for blood disorders like Thalassemia,
             Sickle Cell anemia, bone marrow failure syndromes like Aplastic
@@ -361,15 +342,20 @@
             solid tumours like Neuroblastoma, Ewings Sarcoma and certain
             relapsed cancers like Lymphomas
           </li>
-        </ul>
+        </div>
       </div>
       <div class="drp1">
         <div class="drp-img">
           <p>What makes transplants at Aster CMI unique?</p>
-          <img src="./images/dropdown.png" alt="" />
+          <img
+            id="drop-img"
+            onclick="showDropDown(6, this)"
+            src="./images/dropdown.png"
+            alt=""
+          />
         </div>
         <div class="p-border"></div>
-        <ul id="text" aria-labelledby="dropdownMenuLink">
+        <div class="text-drp hidden">
           <li>
             BMT is the treatment of choice for blood disorders like Thalassemia,
             Sickle Cell anemia, bone marrow failure syndromes like Aplastic
@@ -382,7 +368,7 @@
             solid tumours like Neuroblastoma, Ewings Sarcoma and certain
             relapsed cancers like Lymphomas
           </li>
-        </ul>
+        </div>
       </div>
     </section>
     <section class="testimonials">
@@ -457,16 +443,17 @@
     <!-----------Javascript------------------->
     <script
       type="text/javascript"
-      src="//code.jquery.com/jquery-1.11.0.min.js"
+      src="https://code.jquery.com/jquery-1.11.0.min.js"
     ></script>
     <script
       type="text/javascript"
-      src="//code.jquery.com/jquery-migrate-1.2.1.min.js"
+      src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"
     ></script>
     <script
       type="text/javascript"
-      src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+      src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
     ></script>
-    <script type="text/javascript" src="./app.js"></script>
+    <!-- <script type="text/javascript" src="./js/app.js"></script> -->
+    <script type="text/javascript" src="./js/app.js"></script>
   </body>
 </html>
